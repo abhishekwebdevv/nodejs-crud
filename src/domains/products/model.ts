@@ -2,14 +2,6 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-export interface Product {
-  id: string
-  title: string
-  code: string
-  description: string
-  rating: number
-}
-
 const productSchema = new Schema({
   title: {
     type: String,
@@ -33,6 +25,6 @@ const productSchema = new Schema({
   },
 })
 
-const products = mongoose.model('product', productSchema)
+const Products = mongoose.model('product', productSchema)
 
-export default products
+export default Products

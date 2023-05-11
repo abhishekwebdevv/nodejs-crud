@@ -1,14 +1,26 @@
 import { Request, Response } from 'express'
-import products, { Product } from '../../models/product-schema'
+import Products, { Product } from '../../models/product-schema'
 
-export default function Index(req: Request, res: Response) {
+export default async function Index(req: Request, res: Response) {
+  console.log(`Recieved a ${req.method} on ${req.url}`)
+
   switch (req.method) {
     case 'GET':
-      console.log('GET request')
-
+      try {
+        const products = await Products.find({})
+        console.log(products)
+      } catch (error: any) {
+        console.log(error)
+      }
       break
     case 'POST':
-      console.log('POST request')
+      try {
+        const product = new Products(req.body)
+        product.save()
+        res.status(201).send(product)
+      } catch (error: any) {
+        console.log(error.message)
+      }
       break
     default:
       break
