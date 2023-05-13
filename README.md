@@ -1,15 +1,9 @@
 # 🚀 Welcome to your new awesome project!
 
-This project has been created using **webpack-cli**, you can now run
+App deployed on => https://node-xisb.onrender.com
 
-```
-npm run build
-```
+To run locally :- <br> 
+```npm i && npm run dev```
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+or <br>
+```yarn && yarn run dev```
