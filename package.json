@@ -4,7 +4,7 @@
   "description": "Node.js Restful CRUD API with Node.js, Express and MongoDB",
   "main": "server.js",
   "scripts": {
-    "start": "node dist/server",
+    "start": "ts-node src/server.ts",
     "dev": "nodemon src/server.ts",
     "lint": "eslint . --ext .ts",
     "webpack": "webpack --config webpack.config.ts"

@@ -25,6 +25,8 @@ export async function getProductById(req: Request, res: Response) {
       return
     }
 
+    console.log(product)
+
     res.status(200).send(product)
   } catch (error: any) {
     console.log(error)
